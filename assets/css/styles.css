@@ -1,0 +1,251 @@
+
+@media (max-width: 800px)
+    {
+     #intro, .alinhamento, #galeria3, #perfil1
+    {
+     grid-template-columns: 1fr ;
+     width: 100%;
+     align-items: center;
+    }}
+    
+
+     
+    @media (max-width: 800px) {
+    #main { 
+        background-color: rgb(7, 11, 43);
+        bottom: 0;
+        text-align: center;
+        justify-content: center ;
+        height: 100vh;
+        flex-direction: column;
+    }
+}
+    @media (max-width: 800px) {
+    #main .menu  {
+        flex-direction: column;
+
+    }
+}
+    @media (max-width: 800px) {
+    #main {
+        display: none;
+    }
+    }
+    @media (max-width: 800px) {
+    .fechar_menu {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+    }
+    @media (max-width: 800px) {
+
+    #fechar_menu_label::after {
+            content: '≡';
+            position: fixed;
+            z-index: 2;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            font-size: 30px;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+         }
+    @media (max-width: 800px) {
+    #fechar_menu:checked~.fechar_menu_label::after {
+        
+        content: '×';
+    }
+      }
+
+    @media (max-width: 800px) {
+    .fechar_menu {
+        display: none;
+    }
+      }
+    @media (max-width: 800px) {
+    #fechar_menu:checked~.main {
+        display: block;
+    }
+    }
+    .galeria-img{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+a {
+    text-decoration: none;
+}
+* {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+}
+
+.main { 
+position: fixed;
+display: flex;
+background-color: rgb(21, 20, 20);
+justify-content: space-between;
+padding-left: 30px;
+box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.665);
+top: 0;
+right: 0;
+left: 0;
+width: 100%;
+}
+.menu {
+    display: flex;
+    list-style: none;
+
+}
+.menu a {
+    display: block;
+    padding: 10px;
+    padding-right: 50px;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+.menu a:hover{
+    background-color: rgba(46, 43, 43, 0.53);
+}
+.voltar{
+    padding-top: 4px;
+}
+.caixa h1{
+    text-shadow: 2px 2px 9px rgb(58, 11, 199);
+    margin-top: 90px;
+
+}
+.xp li {
+text-decoration: none;
+}
+body{
+    background-image: url('/assets/img/dragon-scales.svg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+li {
+list-style: none;
+}
+.pag1 {
+    width: 100%;
+    min-height: 100vh;
+    display: block;               
+    
+}
+.h1 {
+    color: black;
+    font-size: 40px;
+    font-size: 60px;
+}
+h2 {
+    font-size: 30px;
+    color: rgb(164, 164, 164);
+    font-size: 40px;
+}
+h1, h2 {
+    font-family: Apple Chancery, cursive;
+    text-transform: uppercase;
+}
+li {
+    padding: 10px;
+}
+.galeria-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+    }
+
+.galeria-img img {
+    transition: all 300ms ease-in-out;
+    }
+
+.galeria-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+    }
+.galeria-img img {
+    width: 100%;
+ }
+.grid-one-content {
+    display: block;
+    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    counter-reset: grid-counter;}
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    min-height: 100vh;
+}
+.intro_dados, .intro_img {
+    justify-content: center;
+    flex-flow: column wrap;
+    font-size: 25px;
+    display: flex;
+}
+.intro_img img {
+    max-width: 100%;
+    height: auto;
+}
+.espaco {
+    display: block;
+    height: 90px;
+}
+.perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+.contato {
+border: none;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap:30px ;
+}
+.contato_dentro {
+ flex: 1 1 320px;
+}
+.contato_dentro label {
+    display: block;
+} 
+.contato_dentro input,.contato_dentro textarea {
+   border: none;
+   background-color: black;
+   padding: 15px 20px;
+   width: 100%;
+}
+.contato_dentro button {
+    border: 3px solid white;
+    background-color: black;
+    margin-top: 80px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+.contato_dentro button:hover{
+    border: 3px solid black;
+    background-color: white;
+    color: black;
+}
+
+div textarea{
+    width: 100%;
+}
+placeholder {
+    color: white;
+}
+
