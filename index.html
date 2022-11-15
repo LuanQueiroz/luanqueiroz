@@ -1,0 +1,435 @@
+<!DOCTYPE>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title>Sobre Luan</title>
+    
+    <input class="fechar_menu" id="fechar_menu" type="checkbox" 
+        role="button" aria-label="fechar-menu">
+        <label class="fechar_menu_label" id="fechar_menu_label" for="fechar_menu" title="fechar menu"></label>
+
+    <section class="main" id="main">
+        <h1 class="voltar" id="voltar" for="voltar"> <a href="#">⇪</a></h1>
+
+        <aside>
+            <nav>
+                <ul class="menu" onclick="getElementById('fechar_menu').checked = false;">
+                    <li><a href="#conhecimento">Conhecimento</a></li>
+                    <li><a href="#espaco">Perfil</a></li>
+                    <li><a href="#sites">Sites</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </aside>
+      
+    </section>
+</head>
+<style>
+        @media (max-width: 800px)
+        {
+         #intro, .alinhamento, #galeria3, #perfil1
+        {
+         grid-template-columns: 1fr ;
+         width: 100%;
+         align-items: center;
+        }}
+        
+    
+         
+        @media (max-width: 800px) {
+        #main { 
+            background-color: rgb(7, 11, 43);
+            bottom: 0;
+            text-align: center;
+            justify-content: center ;
+            height: 100vh;
+            flex-direction: column;
+        }
+    }
+        @media (max-width: 800px) {
+        #main .menu  {
+            flex-direction: column;
+    
+        }
+    }
+        @media (max-width: 800px) {
+        #main {
+            display: none;
+        }
+        }
+        @media (max-width: 800px) {
+        .fechar_menu {
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+        }
+        @media (max-width: 800px) {
+    
+        #fechar_menu_label::after {
+                content: '≡';
+                position: fixed;
+                z-index: 2;
+                top: 20px;
+                right: 20px;
+                background-color: black;
+                font-size: 30px;
+                line-height: 30px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+    
+             }
+        @media (max-width: 800px) {
+        #fechar_menu:checked~.fechar_menu_label::after {
+            
+            content: '×';
+        }
+          }
+    
+        @media (max-width: 800px) {
+        .fechar_menu {
+            display: none;
+        }
+          }
+        @media (max-width: 800px) {
+        #fechar_menu:checked~.main {
+            display: block;
+        }
+        }
+        .galeria-img{
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+    a {
+        text-decoration: none;
+    }
+    * {
+        text-align: center;
+        font-family: sans-serif;
+        color: rgb(255, 255, 255);
+        scroll-behavior: smooth;
+    }
+    
+    .main { 
+    position: fixed;
+    display: flex;
+    background-color: rgb(21, 20, 20);
+    justify-content: space-between;
+    padding-left: 30px;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.665);
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    }
+    .menu {
+        display: flex;
+        list-style: none;
+    
+    }
+    .menu a {
+        display: block;
+        padding: 10px;
+        padding-right: 50px;
+        transition: all 400ms ease-in-out;
+        cursor: pointer;
+    }
+    .menu a:hover{
+        background-color: rgba(46, 43, 43, 0.53);
+    }
+    .voltar{
+        padding-top: 4px;
+    }
+    .caixa h1{
+        text-shadow: 2px 2px 9px rgb(58, 11, 199);
+        margin-top: 90px;
+    
+    }
+    .xp li {
+    text-decoration: none;
+    }
+    body{
+        background-image: url(/dragon-scales.svg);
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    li {
+    list-style: none;
+    }
+    .pag1 {
+        width: 100%;
+        min-height: 100vh;
+        display: block;               
+        
+    }
+    .h1 {
+        color: black;
+        font-size: 40px;
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 30px;
+        color: rgb(164, 164, 164);
+        font-size: 40px;
+    }
+    h1, h2 {
+        font-family: Apple Chancery, cursive;
+        text-transform: uppercase;
+    }
+    li {
+        padding: 10px;
+    }
+    .galeria-img {
+        width: 100%;
+        max-width: 36rem;
+        max-height: 36rem;
+        overflow: hidden;
+        }
+    
+    .galeria-img img {
+        transition: all 300ms ease-in-out;
+        }
+    
+    .galeria-img img:hover {
+        transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+        }
+    .galeria-img img {
+        width: 100%;
+     }
+    .grid-one-content {
+        display: block;
+        }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  
+        counter-reset: grid-counter;}
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        min-height: 100vh;
+    }
+    .intro_dados, .intro_img {
+        justify-content: center;
+        flex-flow: column wrap;
+        font-size: 25px;
+        display: flex;
+    }
+    .intro_img img {
+        max-width: 100%;
+        height: auto;
+    }
+    .espaco {
+        display: block;
+        height: 90px;
+    }
+    .perfil {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+    .contato {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:30px ;
+    }
+    .contato_dentro {
+     flex: 1 1 320px;
+    }
+    .contato_dentro label {
+        display: block;
+    } 
+    .contato_dentro input,.contato_dentro textarea {
+       border: none;
+       background-color: black;
+       padding: 15px 20px;
+       width: 100%;
+    }
+    .contato_dentro button {
+        border: 3px solid white;
+        background-color: black;
+        margin-top: 80px;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+    }
+    .contato_dentro button:hover{
+        border: 3px solid black;
+        background-color: white;
+        color: black;
+    }
+    
+    div textarea{
+        width: 100%;
+    }
+    placeholder {
+        color: white;
+    }
+    </style>
+<body class="body1">
+    <section>
+        <div class="caixa">
+        <h1 class="h1" id="conhecimento">Prazer sou o Luan</h1>
+       </div>
+    </section>
+    <section class="intro alinhamento" id="intro">
+       <div class="intro_dados">
+            <span  class="pag1">
+                <h2>Conhecimento</h2>
+                    <ul>
+                        <li>➯ Python relacionado a objetos</li>
+                        <li>➯ Fundamentos e logica de programação</li>
+                        <li>➯ Anise de dados usando Python</li>
+                        <li>➯ HTML5</li>
+                        <li>➯ CSS3</li>
+                        <li>➯ SQL</li>
+                        <li>➯ MySql</li>
+                        <li>➯ Ética no desenvolvimento de sistemas</li>
+                        <li>➯ Django(terminando)</li>
+                        <li>➯ Pandas</li>
+                        <li>➯ Jupyter-Notebook </li>
+                    </ul>
+            </span>
+       </div>
+       <div class="intro-img"><img src="/undraw_certificate_re_yadi.svg" alt="iamgem_certificado"></div>    
+    </section>
+    <div class="espaco" id="espaco">
+        
+    </div>
+    <span class="pag1 alinhamento" id="perfil">
+            <h1 class="h1">Perfil </h1>
+        
+                <p> Grande, mas com pé no chão é a forma que eu gosto de pensar, sou extremamente focado, não gosto de errar, sei que errar faz parte muitas vezes
+                    de um processo de aprendizado, mas eu evito ao maximo, sou compromissado as minhas taferas, não gosto de atrasar em nenhum compromisso,
+                    gosto bastante de aprender seja quais quer sejam o ensinamento.
+                </p>
+                <div> <img src="/explica.svg" alt="explica"></div>
+        <section class="perfil" id="perfil1">        
+            <div class="oq_esperar">
+                    
+                    <h2> O que esperar!</h2>
+                <p>
+                    Vou estar sempre expandindo meu conhecimento, estarei em prol sempre da empresa, espere o maximo de compromisso
+                    vindo de mim.
+                </p>
+            </div>
+            <div class="qualidade">
+                    <ul>
+                        <h2>Qualidades</h2>
+                        <li>
+                            lider
+                        </li>
+                        <li>
+                            Calmo
+                        </li>
+                        <li>
+                            Esforçado
+                        </li>
+                        <li>
+                            Simpatico
+                        </li>
+                    </ul>
+            </div>
+        </section>            
+    </span>  
+    <div class="espaco" id="sites">
+        
+    </div>      
+    <h1 class="h1">Sites</h1>
+    <p>
+        Em criação com django...
+    </p>
+    <div class="espaco" id="galeria">
+        
+    </div>
+    <section class="alinhamento" id="galeria1">
+        <div id="galeria2">
+          <h2>Galeria</h2>
+          <p>Imagens aleatorias.</p>
+    
+          <div class="grid" id="galeria3">
+            <div class="galeria-img">
+              <img src="http://source.unsplash.com/random/360x360?r=1" alt="random image from unsplash" />
+            </div>
+            <div class="galeria-img">
+              <img src="http://source.unsplash.com/random/360x360?r=2" alt="random image from unsplash" />
+            </div>
+            <div class="galeria-img">
+              <img src="http://source.unsplash.com/random/360x360?r=3" alt="random image from unsplash" />
+            </div>
+            <div class="galeria-img">
+              <img src="http://source.unsplash.com/random/360x360?r=4" alt="random image from unsplash" />
+            </div>
+            <div class="galeria-img">
+              <img src="http://source.unsplash.com/random/360x360?r=5" alt="random image from unsplash" />
+            </div>
+            <div class="galeria-img">
+              <img src="http://source.unsplash.com/random/360x360?r=6" alt="random image from unsplash" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+            <h1>Mais</h1>
+            <p>Esse site foi para descrever, em media oque sei, por isso 
+                não coloquei javascript, algumas animações ja que o foco e meu conhecimento.
+            </p>
+            <h2>Estudando:</h2>
+            <p>
+                Atualmente estou estudando Django e banco de dados, proximo passo
+                e aprender javascript e assim por diante.
+            </p>
+        </div>
+        <div class="espaco" id="contato"></div>
+        <div>
+            <fieldset class="contato">
+                <legend>Contato</legend>
+                <div class="contato_dentro">
+                    <label for="Nome">Nome:</label>
+                    <input type="text" name="Nome" id="nome" placeholder="Digite seu nome">   
+                </div>
+
+                <div class="contato_dentro">
+                    <label for="Idade">Idade:</label>
+                    <input type="number" name="Idade" id="idade" placeholder="Digite sua idade">   
+                </div> 
+
+                <div class="contato_dentro">
+                    <label for="Telefone">Telefone:</label>
+                    <input type="number" name="Telefone" id="telefone" placeholder="Digite seu telefone">   
+                </div>
+                <div class="contato_dentro">
+                    <label for="Email">Email:</label>
+                    <input type="email" name="Email" id="imail" placeholder="exemplo@email.com">   
+                </div>
+
+                <div class="contato_dentro">
+                    <label for="Messagem">Mensagem:</label>
+                    <textarea rows="10" cols="30" placeholder="Digite uma mensagem"></textarea>
+                </div>
+                <div class="contato_dentro">
+                   <button type="Enviar">Enviar</button>
+    
+                </div>
+
+            </fieldset>
+        </div>
+        <footer>
+            Feito com carinho por Luan <br>
+            tel:(11)96792-9335
+        </footer>
+</body>
+</html>
